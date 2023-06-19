@@ -1,6 +1,6 @@
 # DEplain: Human Annotations on the Sentence Simplification Data
 
-For manual evaluation of DEplain-APA-sent and DEplain-web-sent, more than 300  randomly sampled sentence-pairs were annotated (not automatically aligned, not automatically simplified). Each sentence-pair is annotated with respect to evaluation aspects on a Liekrt-scale (grammaticality, simplicity, etc.) and with respect to the operations performed during the simplification (e.g., lexical substitution, clause deletion, change of verb's voice, etc.).
+For manual evaluation of DEplain-APA-sent and DEplain-web-sent, more than 300  randomly sampled sentence-pairs were annotated (not automatically aligned, not automatically simplified). Each sentence-pair is annotated with respect to evaluation aspects on a Liekrt-scale (grammaticality, simplicity, etc.) and with respect to the operations performed during the simplification (e.g., lexical substitution, clause deletion, change of verb's voice, etc.). For more information, please read our paper.
 
 
 
