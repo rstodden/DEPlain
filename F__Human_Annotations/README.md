@@ -1,6 +1,6 @@
 # DEplain: Human Annotations on the Sentence Simplification Data
 
-For manual evaluation of DEplain-APA-sent and DEplain-web-sent, more than 300  randomly sampled sentence-pairs were annotated (not automatically aligned, not automatically simplified). Each sentence-pair is annotated with respect to evaluation aspects on a Liekrt-scale (grammaticality, simplicity, etc.) and with respect to the operations performed during the simplification (e.g., lexical substitution, clause deletion, change of verb's voice, etc.). For more information, please read our paper.
+For manual evaluation of DEplain-APA-sent and DEplain-web-sent, more than 300  randomly sampled sentence-pairs were annotated (not automatically aligned, not automatically simplified). Each sentence-pair is annotated with respect to evaluation aspects on a Likert-scale (grammaticality, simplicity, etc.) and with respect to the operations performed during the simplification (e.g., lexical substitution, clause deletion, change of verb's voice, etc.). For more information, please read our paper.
 
 
 
@@ -12,7 +12,7 @@ Furthermore, one column exists for each rating aspect and each sub-sub-level ope
 ## Data Statistics
 
 ### Quality Assessment
-To assess the quality of the manual alignments, two annotators rated > 300 random selected sentence pairs regarding the following aspects. We provide a statement per aspect on which the annotators are asked to agree or disagree on on a 5-point Liekrt scale. The aspects were rated on different Likert-scales (see line 3 of the following table). In the annotation files, one column per aspect exist.
+To assess the quality of the manual alignments, two annotators rated > 300 random selected sentence pairs regarding the following aspects. We provide a statement per aspect on which the annotators are asked to agree or disagree on a 5-point Likert scale. The aspects were rated on different Likert-scales (see line 3 of the following table). In the annotation files, one column per aspect exist.
 
 - Overall simplicity: The simplified sentence is easier to understand than the original sentence.
 - lexical simplicity: The words of the simplified sentence are easier to understand than the words of the original sentence.
@@ -22,7 +22,7 @@ To assess the quality of the manual alignments, two annotators rated > 300 rando
 the whole paragraph.
 - ambiguity: The (simplified|original) sentence is ambiguous. It can be read in different ways. 
 - grammaticality: The (simplified|original) sentence is fluent, and there are no grammatical errors.
-- simplificity:The (simplified|original) sentence is easy to understand.
+- simplicity:The (simplified|original) sentence is easy to understand.
 
 
 |              |            | Simplicity | LexSimp    | StructSimp | MeaningP.  |     Coherence     |                   |    Grammaticality   |                     |     Simplicity    |                   |

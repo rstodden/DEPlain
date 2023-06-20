@@ -1,7 +1,9 @@
 # DEPlain: DEplain-APA for Sentence Simplification
-The data of APA (Austrian Press Agenca) is restricted for non-commercial research purposes. To get access to DEplain-APA please request the access via zenodo (https://zenodo.org/record/7674560).
+The data of APA (Austrian Press Agency) is restricted for non-commercial research purposes. To get access to DEplain-APA please request the access via zenodo (https://zenodo.org/record/7674560).
 
-## Dataset Statement for DEplain-APA
+## Dataset Statement for DEplain-APA (sentence-level)
+
+
 The dataset statement and the dataset can also be found on huggingface: [https://huggingface.co/datasets/DEplain/DEplain-APA](https://huggingface.co/datasets/DEplain/DEplain-APA).
 
 ### Table of Contents
@@ -36,7 +38,7 @@ The dataset statement and the dataset can also be found on huggingface: [https:/
 
 #### Dataset Summary
 
-[DEplain-APA](https://zenodo.com) [(Stodden et al., 2023)]() is a dataset for the training and evaluation of sentence and document simplification in German. All texts of this dataset are provided by the Austrian Press Agency. The simple-complex sentence pairs are manually aligned.
+[DEplain-APA](https://zenodo.org/record/7674560) [(Stodden et al., 2023)](https://arxiv.org/abs/2305.18939) is a dataset for the training and evaluation of sentence and document simplification in German. All texts of this dataset are provided by the Austrian Press Agency. The simple-complex sentence pairs are manually aligned.
 
 #### Supported Tasks and Leaderboards
 
@@ -49,11 +51,11 @@ The text in this dataset is in Austrian German (`de-at`).
 #### Domains
 All texts in this dataset are news data.
 
-## Dataset Structure
+### Dataset Structure
 
 #### Data Access
 
-- The dataset is licensed with restricted access for only academic purposes. To download the dataset, please request access on [zenodo]().
+- The dataset is licensed with restricted access for only academic purposes. To download the dataset, please request access on [zenodo](https://zenodo.org/record/7674560).
 
 #### Data Instances
 - `document-simplification` configuration: an instance consists of an original document and one reference simplification.
@@ -75,9 +77,11 @@ The statistics are given below.
 
 |                            | Train  | Dev    | Test | Total |
 | -----                      | ------ | ------ | ---- | ----- |
-| Document Pairs            |    |   |   |
-| Sentence Pairs  |   |  |  |
+| Document Pairs            |   387 |  48 |  48 | 483
+| Sentence Pairs  |  10660 | 1231 | 1231 | 13122
 
+
+Inter-Annotator-Agreement: 0.7497 (moderate)
 
 Here, more information on simplification operations will follow soon.
 
@@ -94,7 +98,7 @@ Further DEplain-APA, contains parallel documents as well as parallel sentence pa
 ##### Initial Data Collection and Normalization
 
 The original news texts (in CEFR level C2) were manually simplified by professional translators, i.e. capito – CFS GmbH, and provided to us by the Austrian Press Agency.
-All documents date back to 2019 to 2021 (?). 
+All documents date back to 2019 to 2021. 
 Two German native speakers have manually aligned the sentence pairs by using the text simplification annotation tool TS-ANNO. The data was split into sentences using a German model of SpaCy.
 
 ##### Who are the source language producers?
@@ -158,5 +162,6 @@ If you use part of this work, please cite our paper:
     notes = "preprint: https://arxiv.org/abs/2305.18939",
 }
 ```
+
 This dataset card uses material written by [Juan Diego Rodriguez](https://github.com/juand-r) and [Yacine Jernite](https://github.com/yjernite).
 

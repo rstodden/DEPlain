@@ -18,4 +18,4 @@ For each document-level dataset, we provide two different formats:
 
 ## License
 - **DEplain-APA**: The dataset is provided for research purposes only. Please request access using the following form: [https://zenodo.org/record/7674560](https://zenodo.org/record/7674560)
-- **DEplain-web**: The corpus includes the following licenses: [CC-BY-SA-3](https://creativecommons.org/licenses/by-sa/3.0/), [CC-BY-4](https://creativecommons.org/licenses/by/4.0), and [CC-BY-NC-ND-4](https://creativecommons.org/licenses/by-nc-nd/4.0).
+- **DEplain-web**: The corpus includes the following licenses: [CC-BY-SA-3](https://creativecommons.org/licenses/by-sa/3.0/), [CC-BY-4](https://creativecommons.org/licenses/by/4.0), and [CC-BY-NC-ND-4](https://creativecommons.org/licenses/by-nc-nd/4.0). The corpus also include a "save_use_share" license, for these documents the data provider permitted us to share the data for research purposes.

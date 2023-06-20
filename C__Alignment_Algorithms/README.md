@@ -15,7 +15,7 @@ For our experiments, we used the following alignment methods. Please check out t
 
 
 ## Adaptations to existing Alignment Algorithms
-We adapted all alignment algorithms with respect to their language ressources. For our purpose, we added, for example, German word embeddings or set the language of NLTK to German. If you change the language to your language of interest, you might use the alignment methods also for other languages than German (or previously English).
+We adapted all alignment algorithms with respect to their language resources. For our purpose, we added, for example, German word embeddings or set the language of NLTK to German. If you change the language to your language of interest, you might use the alignment methods also for other languages than German (or previously English).
 
 ## Results
 

@@ -1,7 +1,6 @@
-# DEPlain: DEplain-APA for Sentence Simplification
+## DEPlain: DEplain-web for Document Simplification
 
 ## Dataset Statement for DEplain-web
-
 The dataset statement and the dataset can also be found on huggingface: [https://huggingface.co/datasets/DEplain/DEplain-web](https://huggingface.co/datasets/DEplain/DEplain-web).
 
 ### Table of Contents
@@ -30,13 +29,13 @@ The dataset statement and the dataset can also be found on huggingface: [https:/
 
 ### Dataset Description
 
-- **Repository:** [DEplain-web GitHub repository](https://github.com/rstodden/DEPlain)
-- **Paper:**  Regina Stodden, Momen Omar, and Laura Kallmeyer. 2023. ["DEplain: A German Parallel Corpus with Intralingual Translations into Plain Language for Sentence and Document Simplification."](https://arxiv.org/abs/2305.18939). In Proceedings of the 61st Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers), Toronto, Canada. Association for Computational Linguistics.
+- **Repository:** [DEplain-web GitLab repository]()
+- **Paper:** Regina Stodden, Momen Omar, and Laura Kallmeyer. 2023. ["DEplain: A German Parallel Corpus with Intralingual Translations into Plain Language for Sentence and Document Simplification."](https://arxiv.org/abs/2305.18939). In Proceedings of the 61st Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers), Toronto, Canada. Association for Computational Linguistics.
 - **Point of Contact:** [Regina Stodden](regina.stodden@hhu.de)
 
 #### Dataset Summary
 
-[DEplain-web](https://github.com/rstodden/DEPlain) [(Stodden et al., 2023)](https://arxiv.org/abs/2305.18939) is a dataset for the evaluation of sentence and document simplification in German. All texts of this dataset are scraped from the web. All documents were licenced with an open license. The simple-complex sentence pairs are manually aligned.
+[DEplain-web](https://github.com) [(Stodden et al., 2023)]() is a dataset for the evaluation of sentence and document simplification in German. All texts of this dataset are scraped from the web. All documents were licenced with an open license. The simple-complex sentence pairs are manually aligned.
 This dataset only contains a test set. For additional training and development data, please scrape more data from the web using a [web scraper for text simplification data](https://github.com/rstodden/data_collection_german_simplification) and align the sentences of the documents automatically using, for example, [MASSalign](https://github.com/ghpaetzold/massalign) by [Paetzold et al. (2017)](https://www.aclweb.org/anthology/I17-3001/).
 
 #### Supported Tasks and Leaderboards
@@ -70,57 +69,40 @@ The texts are from 6 different domains: fictional texts (literature and fairy ta
 
   
 #### Data Splits
-DEplain-web contains a training set, development set and a test set. 
-The dataset was split based on the license of the data. All manually-aligned sentence pairs with an open license are part of the test set. The document-level test set, also only contains the documents which are manually aligned. For document-level dev and test set the documents which are not aligned or not public available are used. For the sentence-level, the alingment pairs can be produced by automatic alignments (see [Stodden et al., 2023](https://arxiv.org/abs/2305.18939)).
+DEplain-web does not contain a training set, but only a test set. 
+The dataset was split based on the license of the data. All manually-aligned sentence pairs with an open license are part of the test set.
+Additional training and development data can be produced by automatic alignments (see Stodden et al., 2023).
 
 
-|                            | Train  | Dev    | Test | Total |
-| -----                      | ------ | ------ | ---- | ----- |
-| Document Pairs            |  481  | 122  | 147  | 756
-| Sentence Pairs  | 1281  | 313 | 1846 | 3440
+|                         | Train | Dev | Test | Total |
+|-------------------------|-------|-----|------|-------|
+| DEplain-web-manual-open | -     | -   | 147  | 147   |
+| DEplain-web-auto-open   | 199   | 50  | -    | 279   |
+| DEplain-web-auto-closed | 288   | 72  | -    | 360   |
+| in total                | 487   | 122 | 147  | 756   |
 
+: Split of documents into training, development, and test data.
 
-
-| **subcorpus**              | **simple**  | **complex** | **domain**  | **description**                                                          | **\# doc.** |
-|----------------------------------|------------------|------------------|------------------|-------------------------------------------------------------------------------|------------------|
-| **EinfacheBücher**          | Plain German               | Standard German / Old German            | fiction          | Books in plain German                                                         | 15               |
-| **EinfacheBücherPassanten** | Plain German               | Standard German / Old German            | fiction          | Books in plain German                                                         | 4                |
-| **ApothekenUmschau**        | Plain German               | Standard German               | health           | Health magazine in which diseases are explained in plain German               | 71               |
-| **BZFE**                    | Plain German               | Standard German               | health           | Information of the German Federal Agency for Food on good nutrition           | 18               |
-| **Alumniportal*}**            | Plain German               | Plain German               | language learner | Texts related to Germany and German traditions written for language learners. | 137              |
-| **Lebenshilfe**             | Easy-to-read German              | Standard German               | accessibility    |                                                                               | 49               |
-| **Bibel**                   | Easy-to-read German              | Standard German               | bible            | Bible texts in easy-to-read German                                            | 221              |
-| **NDR-Märchen    **         | Easy-to-read German              | Standard German / Old German            | fiction          | Fairytales in easy-to-read German                                             | 10               |
-| **EinfachTeilhaben**        | Easy-to-read German              | Standard German               | accessibility    |                                                                               | 67               |
-| **StadtHamburg**            | Easy-to-read German              | Standard German               | public authority | Information of and regarding the German city Hamburg                          | 79               |
-| **StadtKöln**              | Easy-to-read German              | Standard German               | public authority | Information of and regarding the German city Cologne                          | 85               |
+| **subcorpus**               | **simple**          | **complex**                  | **domain**       | **description**                                                               | **\# doc.** |
+|-----------------------------|---------------------|------------------------------|------------------|-------------------------------------------------------------------------------|-------------|
+| **EinfacheBücher**          | Plain German        | Standard German / Old German | fiction          | Books in plain German                                                         | 15          |
+| **EinfacheBücherPassanten** | Plain German        | Standard German / Old German | fiction          | Books in plain German                                                         | 4           |
+| **ApothekenUmschau**        | Plain German        | Standard German              | health           | Health magazine in which diseases are explained in plain German               | 71          |
+| **BZFE**                    | Plain German        | Standard German              | health           | Information of the German Federal Agency for Food on good nutrition           | 18          |
+| **Alumniportal*}**          | Plain German        | Plain German                 | language learner | Texts related to Germany and German traditions written for language learners. | 137         |
+| **Lebenshilfe**             | Easy-to-read German | Standard German              | accessibility    |                                                                               | 49          |
+| **Bibel**                   | Easy-to-read German | Standard German              | bible            | Bible texts in easy-to-read German                                            | 221         |
+| **NDR-Märchen    **         | Easy-to-read German | Standard German / Old German | fiction          | Fairytales in easy-to-read German                                             | 10          |
+| **EinfachTeilhaben**        | Easy-to-read German | Standard German              | accessibility    |                                                                               | 67          |
+| **StadtHamburg**            | Easy-to-read German | Standard German              | public authority | Information of and regarding the German city Hamburg                          | 79          |
+| **StadtKöln**               | Easy-to-read German | Standard German              | public authority | Information of and regarding the German city Cologne                          | 85          |
+| **in total**                |                     |                              |                  |                                                                               | 756         |
 
 : Documents per Domain in DEplain-web.
 
 
 
-| domain  | avg. | std. | interpretation | \# sents | \# docs |
-|------------------|---------------|---------------|-------------------------|-------------------|------------------|
-| bible            | 0.7011        | 0.31          | moderate                | 6903              | 3                |
-| fiction          | 0.6131        | 0.39          | moderate                | 23289             | 3                |
-| health           | 0.5147        | 0.28          | weak                    | 13736             | 6                |
-| language learner | 0.9149        | 0.17          | almost perfect          | 18493             | 65               |
-| all              | 0.8505        | 0.23          | strong                  | 87645             | 87               |
-
-: Inter-Annotator-Agreement per Domain in DEplain-web-manual.
-
-| operation | # documents | percentage |
-|-----------|-------------|------------|
-| rehphrase | 863         | 11.73      |
-| deletion  | 3050        | 41.47      |
-| addition  | 1572        | 21.37      |
-| identical | 887         | 12.06      |
-| fusion    | 110         | 1.5        |
-| merge     | 77          | 1.05       |
-| split     | 796         | 10.82      |
-| in total  | 7355        | 100        |
-
-: Information regarding Simplification Operations in DEplain-web-manual.
+Here, more information on simplification operations will follow soon.
 
 ### Dataset Creation
 
@@ -138,7 +120,7 @@ The data was split into sentences using a German model of SpaCy.
 Two German native speakers have manually aligned the sentence pairs by using the text simplification annotation tool [TS-ANNO](https://github.com/rstodden/TS_annotation_tool) by [Stodden & Kallmeyer (2022)](https://aclanthology.org/2022.acl-demo.14/). 
 
 ##### Who are the source language producers?
-The texts of the documents were manually simplified by professional translators. See for an extensive list of the scraped URLs see Table 10 in [Stodden et al. (2023)](https://arxiv.org/abs/2305.18939).
+The texts of the documents were manually simplified by professional translators. See for an extensive list of the scraped URLs see Table x in [Stodden et al. (2023)]().
 
 #### Annotations
 
@@ -177,9 +159,11 @@ DEplain-APA was developed by researchers at the Heinrich-Heine-University Düsse
 
 #### Licensing Information
 
-The corpus includes the following licenses: CC-BY-SA-3, CC-BY-4, CC-BY-NC-ND-4, MIT.
+The corpus includes the following licenses: CC-BY-SA-3, CC-BY-4, and CC-BY-NC-ND-4. The corpus also include a "save_use_share" license, for these documents the data provider permitted us to share the data for research purposes.
 
 #### Citation Information
+
+If you use part of this work, please cite our paper:
 
 
 ```
@@ -196,5 +180,4 @@ The corpus includes the following licenses: CC-BY-SA-3, CC-BY-4, CC-BY-NC-ND-4, 
     notes = "preprint: https://arxiv.org/abs/2305.18939",
 }
 ```
-
 This dataset card uses material written by [Juan Diego Rodriguez](https://github.com/juand-r) and [Yacine Jernite](https://github.com/yjernite).

@@ -5,6 +5,7 @@ To exemplify the usage of DEPLAIN for training and evaluating TS models, we are 
 You can find our edited code here: [https://github.com/omarTronto/longmbart_model](https://github.com/omarTronto/longmbart_model).
 
 ## Document Simplification
+You can find the generated simplifications of DEplain-web here: [](). The generated files of DEplain-APA are stored on [zenodo](https://zenodo.org/record/7674560), please request access to it.
 
 ### Results on Document-level
 
@@ -28,6 +29,7 @@ You can find our edited code here: [https://github.com/omarTronto/longmbart_mode
 : Results on DEplain-web test (n=147).
 
 ## Sentence Simplification
+You can find the generated simplifications of DEplain-web here: [](). The generated files of DEplain-APA are stored on [zenodo](https://zenodo.org/record/7674560), please request access to it.
 
 ### Results on Sentence-level
 | train data | n | SARI ↑ | BLEU ↑ | BS-P ↑ | FRE ↑ |
