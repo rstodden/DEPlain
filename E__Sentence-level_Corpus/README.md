@@ -16,7 +16,7 @@ This directory contains:
 |   | Corpus Name Sent.                                              | # Original Sents | # Simple Sents. | Alignment | License      | # Sent. Pairs (train/dev/test) |
 |---|----------------------------------------------------------------|------------------|-----------------|-----------|--------------|--------------------------------|
 | 1 | [DEplain-APA-sent](./DEplain-APA-sent)                         | 25,607           | 26,471          | manual    | upon request | 13,122 (10,660/1,231/1,231)    |
-| 2 | [DEplain-web-sent-manual-open](./Eplain-web-sent-manual-open)  | 6,138            | 6,402           | manual    | open         | 1,846  (-/-/1846)              |
+| 2 | [DEplain-web-sent-manual-open](./DEplain-web-sent/manual/open)  | 6,138            | 6,402           | manual    | open         | 1,846  (-/-/1846)              |
 | 3 | [DEplain-web-sent-auto-open](./DEplain-web-sent/auto/open)     | 7,087            | 7,760           | auto      | open         | 652 (514/138/-)                |
 | 4 | [DEplain-web-sent-auto-closed](./DEplain-web-sent/auto/closed) | 12,847           | 18,068          | auto      | closed       | 942  (767/175/-)               |
 
