@@ -1,10 +1,11 @@
 # DEPlain: DEplain-APA for Sentence Simplification
+This directory contains the sentence-level data of DEplain-APA (DEplain-APA-sent).
+
 The data of APA (Austrian Press Agency) is restricted for non-commercial research purposes. To get access to DEplain-APA please request the access via zenodo (https://zenodo.org/record/7674560).
+Download the data and add the content with ```cp -r src/* target```.
 
-## Dataset Statement for DEplain-APA (sentence-level)
-
-
-The dataset statement and the dataset can also be found on huggingface: [https://huggingface.co/datasets/DEplain/DEplain-APA](https://huggingface.co/datasets/DEplain/DEplain-APA).
+# Dataset Statement for DEplain-APA
+In the following, we provide a dataset for DEplain-APA (following Huggingface's data cards). 
 
 ### Table of Contents
 - [Dataset Description](#dataset-description)
@@ -38,7 +39,7 @@ The dataset statement and the dataset can also be found on huggingface: [https:/
 
 #### Dataset Summary
 
-[DEplain-APA](https://zenodo.org/record/7674560) [(Stodden et al., 2023)](https://arxiv.org/abs/2305.18939) is a dataset for the training and evaluation of sentence and document simplification in German. All texts of this dataset are provided by the Austrian Press Agency. The simple-complex sentence pairs are manually aligned.
+DEplain-APA [(Stodden et al., 2023)](https://arxiv.org/abs/2305.18939) is a dataset for the training and evaluation of sentence and document simplification in German. All texts of this dataset are provided by the Austrian Press Agency. The simple-complex sentence pairs are manually aligned.
 
 #### Supported Tasks and Leaderboards
 
@@ -51,22 +52,47 @@ The text in this dataset is in Austrian German (`de-at`).
 #### Domains
 All texts in this dataset are news data.
 
-### Dataset Structure
+## Dataset Structure
 
 #### Data Access
 
 - The dataset is licensed with restricted access for only academic purposes. To download the dataset, please request access on [zenodo](https://zenodo.org/record/7674560).
 
 #### Data Instances
-- `document-simplification` configuration: an instance consists of an original document and one reference simplification.
-- `sentence-simplification` configuration: an instance consists of an original sentence and one manually aligned reference simplification.
+- `document-simplification` configuration: an instance consists of an original document and one reference simplification (in plain-text format).
+- `sentence-simplification` configuration: an instance consists of  original sentence(s) and one manually aligned reference simplification (inclusing one or more sentences).
 
 
 #### Data Fields
 
-- `original`: an original text from the source datasets written for people with German skills equal to CEFR level B1
-- `simplification`: a simplified text from the source datasets written for people with German skills equal to CEFR level A2
-- more metadata is added to the dataset
+| data field                                      | data field description                                                                                |
+|-------------------------------------------------|-------------------------------------------------------------------------------------------------------|
+| `original`                                      | an original text from the source dataset                                                              |
+| `simplification`                                | a simplified text from the source dataset                                                             |
+| `pair_id`                                       | document pair id                                                                                      |
+| `complex_document_id ` (on doc-level)           | id of complex document (-1)                                                                           |
+| `simple_document_id ` (on doc-level)            | id of simple document (-0)                                                                            |
+| `original_id ` (on sent-level)                  | id of sentence(s) of the original text                                                                |
+| `simplification_id ` (on sent-level)            | id of sentence(s) of the simplified text                                                              |
+| `domain `                                       | text domain of the document pair                                                                      |
+| `corpus `                                       | subcorpus name                                                                                        |
+| `simple_url `                                   | origin URL of the simplified document                                                                 |
+| `complex_url `                                  | origin URL of the simplified document                                                                 |
+| `simple_level ` or `language_level_simple `     | required CEFR language level to understand the simplified document                                    |
+| `complex_level ` or  `language_level_original ` | required CEFR language level to understand the original document                                      |
+| `simple_location_html `                         | location on hard disk where the HTML file of the simple document is stored                            |
+| `complex_location_html `                        | location on hard disk where the HTML file of the original document is stored                          |
+| `simple_location_txt `                          | location on hard disk where the content extracted from the HTML file of the simple document is stored |
+| `complex_location_txt `                         | location on hard disk where the content extracted from the HTML file of the simple document is stored |
+| `alignment_location `                           | location on hard disk where the alignment is stored                                                   |
+| `simple_author `                                | author (or copyright owner) of the simplified document                                                |
+| `complex_author `                               | author (or copyright owner) of the original document                                                  |
+| `simple_title `                                 | title of the simplified document                                                                      |
+| `complex_title `                                | title of the original document                                                                        |
+| `license `                                      | license of the data                                                                                   |
+| `last_access ` or `access_date`                 | data origin data or data when the HTML files were downloaded                                          |
+| `rater`                                         | id of the rater who annotated the sentence pair                                                       |
+| `alignment`                                     | type of alignment, e.g., 1:1, 1:n, n:1 or n:m                                                         |
 
   
 #### Data Splits
@@ -77,11 +103,10 @@ The statistics are given below.
 
 |                            | Train  | Dev    | Test | Total |
 | -----                      | ------ | ------ | ---- | ----- |
-| Document Pairs            |   387 |  48 |  48 | 483
-| Sentence Pairs  |  10660 | 1231 | 1231 | 13122
+| Document Pairs            |  387  | 48  | 48  |483 |
+| Sentence Pairs  | 10660  | 1231 | 1231 | 13122|
 
-
-Inter-Annotator-Agreement: 0.7497 (moderate)
+Inter-Annotator-Agreement: 0.7497 (moderate).
 
 Here, more information on simplification operations will follow soon.
 
@@ -97,12 +122,12 @@ Further DEplain-APA, contains parallel documents as well as parallel sentence pa
 
 ##### Initial Data Collection and Normalization
 
-The original news texts (in CEFR level C2) were manually simplified by professional translators, i.e. capito – CFS GmbH, and provided to us by the Austrian Press Agency.
+The original news texts (in CEFR level B2) were manually simplified by professional translators, i.e. capito – CFS GmbH, and provided to us by the Austrian Press Agency.
 All documents date back to 2019 to 2021. 
 Two German native speakers have manually aligned the sentence pairs by using the text simplification annotation tool TS-ANNO. The data was split into sentences using a German model of SpaCy.
 
 ##### Who are the source language producers?
-The original news texts (in CEFR level C2) were manually simplified by professional translators, i.e. capito – CFS GmbH. No other demographic or compensation information is known.
+The original news texts (in CEFR level B2) were manually simplified by professional translators, i.e. capito – CFS GmbH. No other demographic or compensation information is known.
 
 #### Annotations
 
@@ -141,7 +166,7 @@ Researchers at the Heinrich-Heine-University Düsseldorf, Germany, developed DEp
 
 #### Licensing Information
 
-[More Information Needed]
+The dataset (DEplain-APA) is provided for research purposes only. Please request access using the following form: [https://zenodo.org/record/7674560](https://zenodo.org/record/7674560).
 
 #### Citation Information
 
@@ -162,6 +187,5 @@ If you use part of this work, please cite our paper:
     notes = "preprint: https://arxiv.org/abs/2305.18939",
 }
 ```
-
 This dataset card uses material written by [Juan Diego Rodriguez](https://github.com/juand-r) and [Yacine Jernite](https://github.com/yjernite).
 

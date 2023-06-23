@@ -1,4 +1,5 @@
 # DEPlain: DEplain-APA for Sentence Simplification
+This directory contains the sentence-level data of DEplain-web (DEplain-web) split into subdirectories based on the alignment type and license of the documents.
 
 ## Dataset Statement for DEplain-web
 
@@ -64,20 +65,61 @@ The texts are from 6 different domains: fictional texts (literature and fairy ta
 
 #### Data Fields
 
-- `original`: an original text from the source datasets written for people with German skills equal to CEFR level B1
-- `simplification`: a simplified text from the source datasets written for people with German skills equal to CEFR level A2
-- more metadata is added to the dataset
 
+| data field                                      | data field description                                                                                |
+|-------------------------------------------------|-------------------------------------------------------------------------------------------------------|
+| `original`                                      | an original text from the source dataset                                                              |
+| `simplification`                                | a simplified text from the source dataset                                                             |
+| `pair_id`                                       | document pair id                                                                                      |
+| `complex_document_id ` (on doc-level)           | id of complex document (-1)                                                                           |
+| `simple_document_id ` (on doc-level)            | id of simple document (-0)                                                                            |
+| `original_id ` (on sent-level)                  | id of sentence(s) of the original text                                                                |
+| `simplification_id ` (on sent-level)            | id of sentence(s) of the simplified text                                                              |
+| `domain `                                       | text domain of the document pair                                                                      |
+| `corpus `                                       | subcorpus name                                                                                        |
+| `simple_url `                                   | origin URL of the simplified document                                                                 |
+| `complex_url `                                  | origin URL of the simplified document                                                                 |
+| `simple_level ` or `language_level_simple `     | required CEFR language level to understand the simplified document                                    |
+| `complex_level ` or  `language_level_original ` | required CEFR language level to understand the original document                                      |
+| `simple_location_html `                         | location on hard disk where the HTML file of the simple document is stored                            |
+| `complex_location_html `                        | location on hard disk where the HTML file of the original document is stored                          |
+| `simple_location_txt `                          | location on hard disk where the content extracted from the HTML file of the simple document is stored |
+| `complex_location_txt `                         | location on hard disk where the content extracted from the HTML file of the simple document is stored |
+| `alignment_location `                           | location on hard disk where the alignment is stored                                                   |
+| `simple_author `                                | author (or copyright owner) of the simplified document                                                |
+| `complex_author `                               | author (or copyright owner) of the original document                                                  |
+| `simple_title `                                 | title of the simplified document                                                                      |
+| `complex_title `                                | title of the original document                                                                        |
+| `license `                                      | license of the data                                                                                   |
+| `last_access ` or `access_date`                 | data origin data or data when the HTML files were downloaded                                          |
+| `rater`                                         | id of the rater who annotated the sentence pair                                                       |
+| `alignment`                                     | type of alignment, e.g., 1:1, 1:n, n:1 or n:m                                                         |
+
+  
   
 #### Data Splits
 DEplain-web contains a training set, development set and a test set. 
 The dataset was split based on the license of the data. All manually-aligned sentence pairs with an open license are part of the test set. The document-level test set, also only contains the documents which are manually aligned. For document-level dev and test set the documents which are not aligned or not public available are used. For the sentence-level, the alingment pairs can be produced by automatic alignments (see [Stodden et al., 2023](https://arxiv.org/abs/2305.18939)).
 
+Document-level:
 
-|                | Train | Dev | Test | Total |
-|----------------|-------|-----|------|-------|
-| Document Pairs | 481   | 122 | 147  | 756   |
-| Sentence Pairs | 1281  | 313 | 1846 | 3440  |
+|                         | Train | Dev | Test | Total |
+|-------------------------|-------|-----|------|-------|
+| DEplain-web-manual-open | -     | -   | 147  | 147   |
+| DEplain-web-auto-open   | 199   | 50  | -    | 279   |
+| DEplain-web-auto-closed | 288   | 72  | -    | 360   |
+| in total                | 487   | 122 | 147  | 756   |
+
+Sentence-level:
+
+|                         | Train | Dev | Test | Total |
+|-------------------------|-------|-----|------|-------|
+| DEplain-web-manual-open | -     | -   | 1846  | 1846   |
+| DEplain-web-auto-open   | 514   | 138  | -    |  652  |
+| DEplain-web-auto-closed | 767   | 175  | -    |  942  |
+| in total                |  1281  | 313 | 1846  |    |
+
+
 
 | **subcorpus**              | **simple**  | **complex** | **domain**  | **description**                                                          | **\# doc.** |
 |----------------------------------|------------------|------------------|------------------|-------------------------------------------------------------------------------|------------------|

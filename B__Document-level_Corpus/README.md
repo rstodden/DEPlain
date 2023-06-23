@@ -7,14 +7,21 @@ For each document-level dataset, we provide two different formats:
 - sentence split: documents per line with sentence split, each sentence is separated by "|||"
 
 
-## Data Statistics
-|   | Name        | License      | # Doc. Pairs (train/dev/test) | # Original Sents | # Simple Sents. |
-|---|-------------|--------------|-------------------------------|------------------|-----------------|
-| 1 | DEplain-apa | upon request | 483  (387/48/48)              | 25,607           | 26,471          |
-| 2 | DEplain-web | open         | 147  (-/-/147)                | 6,138            | 6,402           |
-| 3 | DEplain-web | open         | 249 (199/50/-)                | 7,087            | 7,760           |
-| 4 | DEplain-web | closed       | 360 (288/72/-)                | 12,847           | 18,068          |
-|   | In total    | mixed        | 1,239 (874/170/195)           | 51,681           | 58,701          |
+## Corpus Statistics
+
+|   | Corpus Name Doc.                                                                      | License      | # Doc. Pairs (train/dev/test) | # Original Sents | # Simple Sents. |
+|---|---------------------------------------------------------------------------------------|--------------|-------------------------------|------------------|-----------------|
+| 1 | [DEplain-APA-doc](./B__Document-level_Corpus/DEplain-APA-doc)                         | upon request | 483  (387/48/48)              | 25,607           | 26,471          |
+| 2 | [DEplain-web-doc-manual-open](./B__Document-level_Corpus/DEplain-web-doc/manual/open) | open         | 147  (-/-/147)                | 6,138            | 6,402           |
+| 3 | [DEplain-web-doc-auto-open](./B__Document-level_Corpus/DEplain-web-doc/auto/open)     | open         | 249 (199/50/-)                | 7,087            | 7,760           |
+| 4 | [DEplain-web-doc-auto-closed](./B__Document-level_Corpus/DEplain-web-doc/auto/closed) | closed       | 360 (288/72/-)                | 12,847           | 18,068          |
+|   | In total                                                                              | mixed        | 1,239 (874/170/195)           | 51,681           | 58,701          |
+
+## Data Availability
+The DEplain-web corpus is available in the current repository. Furthermore, the dataset is also available on Huggingface:
+
+- [DEplain-web-doc-manual](https://huggingface.co/datasets/DEplain/DEplain-web-doc-manual)
+- [DEplain-web-doc-auto](https://huggingface.co/datasets/DEplain/DEplain-web-doc-auto)
 
 ## License
 - **DEplain-APA**: The dataset is provided for research purposes only. Please request access using the following form: [https://zenodo.org/record/7674560](https://zenodo.org/record/7674560)
