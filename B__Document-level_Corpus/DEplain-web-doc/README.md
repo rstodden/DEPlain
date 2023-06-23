@@ -133,10 +133,10 @@ Sentence-level:
 | **EinfacheBücherPassanten** | Plain German        | Standard German / Old German | fiction          | Books in plain German                                                         | 4           |
 | **ApothekenUmschau**        | Plain German        | Standard German              | health           | Health magazine in which diseases are explained in plain German               | 71          |
 | **BZFE**                    | Plain German        | Standard German              | health           | Information of the German Federal Agency for Food on good nutrition           | 18          |
-| **Alumniportal*}**          | Plain German        | Plain German                 | language learner | Texts related to Germany and German traditions written for language learners. | 137         |
+| **Alumniportal**          | Plain German        | Plain German                 | language learner | Texts related to Germany and German traditions written for language learners. | 137         |
 | **Lebenshilfe**             | Easy-to-read German | Standard German              | accessibility    |                                                                               | 49          |
 | **Bibel**                   | Easy-to-read German | Standard German              | bible            | Bible texts in easy-to-read German                                            | 221         |
-| **NDR-Märchen    **         | Easy-to-read German | Standard German / Old German | fiction          | Fairytales in easy-to-read German                                             | 10          |
+| **NDR-Märchen**         | Easy-to-read German | Standard German / Old German | fiction          | Fairytales in easy-to-read German                                             | 10          |
 | **EinfachTeilhaben**        | Easy-to-read German | Standard German              | accessibility    |                                                                               | 67          |
 | **StadtHamburg**            | Easy-to-read German | Standard German              | public authority | Information of and regarding the German city Hamburg                          | 79          |
 | **StadtKöln**               | Easy-to-read German | Standard German              | public authority | Information of and regarding the German city Cologne                          | 85          |
