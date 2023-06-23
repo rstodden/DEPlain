@@ -56,10 +56,7 @@ In the second table, we show the statsitics on n:m aligned pairs, where n and m 
 
 
 ## Data Availability
-The DEplain-web corpus is available in the current repository. Furthermore, the dataset is also available on Huggingface:
-
-- [DEplain-web-sent-manual](https://huggingface.co/datasets/DEplain/DEplain-web-sent-manual).
-- [DEplain-web-sent-auto](https://huggingface.co/datasets/DEplain/DEplain-web-sent-auto).
+The DEplain-web corpus is available in the current repository. Furthermore, the dataset is also available on Huggingface: [https://huggingface.co/datasets/DEplain/DEplain-web-sent](https://huggingface.co/datasets/DEplain/DEplain-web-sent).
 
 ## License
 - **DEplain-APA**: The dataset is provided for research purposes only. Please request access using the following form: [https://zenodo.org/record/7674560](https://zenodo.org/record/7674560)

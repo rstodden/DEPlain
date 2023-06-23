@@ -18,10 +18,7 @@ For each document-level dataset, we provide two different formats:
 |   | In total                                                                              | mixed        | 1,239 (874/170/195)           | 51,681           | 58,701          |
 
 ## Data Availability
-The DEplain-web corpus is available in the current repository. Furthermore, the dataset is also available on Huggingface:
-
-- [DEplain-web-doc-manual](https://huggingface.co/datasets/DEplain/DEplain-web-doc-manual)
-- [DEplain-web-doc-auto](https://huggingface.co/datasets/DEplain/DEplain-web-doc-auto)
+The DEplain-web corpus is available in the current repository. Furthermore, the dataset is also available on Huggingface: [https://huggingface.co/datasets/DEplain/DEplain-web-doc](https://huggingface.co/datasets/DEplain/DEplain-web-doc).
 
 ## License
 - **DEplain-APA**: The dataset is provided for research purposes only. Please request access using the following form: [https://zenodo.org/record/7674560](https://zenodo.org/record/7674560)

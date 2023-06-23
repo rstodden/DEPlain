@@ -2,7 +2,7 @@
 This directory contains the document-level data of DEplain-web (DEplain-web) split into subdirectories based on the alignment type and license of the documents. For each subcorpus the data is provided in two formats, i.e., plain text and with sentence splits.
 
 ## Dataset Statement for DEplain-web
-The dataset statement and the dataset can also be found on huggingface: [https://huggingface.co/datasets/DEplain/DEplain-web](https://huggingface.co/datasets/DEplain/DEplain-web).
+The dataset statement and the dataset can also be found on huggingface: [https://huggingface.co/datasets/DEplain/DEplain-web-doc](https://huggingface.co/datasets/DEplain/DEplain-web-doc).
 
 ### Table of Contents
 - [Dataset Description](#dataset-description)

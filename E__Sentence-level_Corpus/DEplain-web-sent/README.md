@@ -3,7 +3,7 @@ This directory contains the sentence-level data of DEplain-web (DEplain-web) spl
 
 ## Dataset Statement for DEplain-web
 
-The dataset statement and the dataset can also be found on huggingface: [https://huggingface.co/datasets/DEplain/DEplain-web](https://huggingface.co/datasets/DEplain/DEplain-web).
+The dataset statement and the dataset can also be found on huggingface: [https://huggingface.co/datasets/DEplain/DEplain-web-sent](https://huggingface.co/datasets/DEplain/DEplain-web-sent).
 
 ### Table of Contents
 - [Dataset Description](#dataset-description)
