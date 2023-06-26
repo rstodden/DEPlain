@@ -1,17 +1,16 @@
 # DEplain: Alignment Algorithms
 
-We couldn't align all documents of DEplain-web manually. Therefore, we experimented with different alignment algorithms to automatically the remaining documents as well as reproduce the data with closed licenses. Here, we present the modified code of the following alignments methods. In our experiments, MASSalign achieved the best results. If you want to reproduce our sentence-level DEplain-web corpus with closed licenses, we recommend to also use MASSalign. For more information, please also read our paper.
+We couldn't align all documents of DEplain-web manually. Therefore, we experimented with different alignment algorithms to automatically the remaining documents as well as reproduce the data with closed licenses. Here, we present the modified code of the following alignment methods. In our experiments, MASSalign achieved the best results. If you want to reproduce our sentence-level DEplain-web corpus with closed licenses, we recommend also using MASSalign. For more information, please also read our paper.
 
 ## Alignment Algorithms
-For our experiments, we used the following alignment methods. Please check out the linked repositories, for more details the methods and our adaptations.
+For our experiments, we used the following alignment methods. Please check out the linked repositories, for more details, the methods, and our adaptations.
 
 - MASSalign: [https://github.com/rstodden/massalign_DE](https://github.com/rstodden/massalign_DE) (LGPL v3.0 license)
 - CATS: [https://github.com/rstodden/SimpTextAlignPython_DE](https://github.com/rstodden/SimpTextAlignPython_DE) (MIT license)
-- LHA: []() (MIT license)
-- Sent-LaBSE: []() (? license)
-- Sent-RoBERTa: []() (? license)
-- VecAlign: []() (Apache License 2.0)
-- BERTalign: []()  (GNU General Public License v3.0)
+- LHA: [https://github.com/omarTronto/lha_DE](https://github.com/omarTronto/lha_DE) (MIT license)
+- Sent-LaBSE/RoBERTa: [https://github.com/omarTronto/sentence_transformer_alignment_DE](https://github.com/omarTronto/sentence_transformer_alignment_DE) (MIT license)
+- VecAlign: [https://github.com/thompsonb/vecalign](https://github.com/thompsonb/vecalign) (Apache License 2.0)
+- BERTalign: [https://github.com/omarTronto/bertalign_DE](https://github.com/omarTronto/bertalign_DE)  (GNU General Public License v3.0)
 
 
 ## Adaptations to existing Alignment Algorithms
