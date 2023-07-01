@@ -7,6 +7,11 @@ You can find our edited code here: [https://github.com/omarTronto/ats-models](ht
 ## Document Simplification
 You can find the generated simplifications of DEplain-web here: [](). The generated files of DEplain-APA are stored on [zenodo](https://zenodo.org/record/7674560), please request access to it.
 
+### Finetuned models checkpoints
+[Trimmed LongmBART finetuned on DEplain-APA](https://huggingface.co/DEplain/trimmed_longmbart_docs_apa)
+[Trimmed LongmBART finetuned on DEplain-web](https://huggingface.co/DEplain/trimmed_longmbart_docs_web)
+[Trimmed LongmBART finetuned on DEplain-APA+web](https://huggingface.co/DEplain/trimmed_longmbart_docs_apa_web)
+
 ### Results on Document-level
 
 | train data | n | SARI ↑ | BLEU ↑ | BS-P ↑ | FRE ↑ |
@@ -30,6 +35,10 @@ You can find the generated simplifications of DEplain-web here: [](). The genera
 
 ## Sentence Simplification
 You can find the generated simplifications of DEplain-web here: [](). The generated files of DEplain-APA are stored on [zenodo](https://zenodo.org/record/7674560), please request access to it.
+
+### Finetuned models checkpoints
+[Trimmed mBART finetuned on DEplain-APA](https://huggingface.co/DEplain/trimmed_mbart_sents_apa)
+[Trimmed mBART finetuned on DEplain-APA+web](https://huggingface.co/DEplain/trimmed_mbart_sents_apa_web)
 
 ### Results on Sentence-level
 | train data | n | SARI ↑ | BLEU ↑ | BS-P ↑ | FRE ↑ |
