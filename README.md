@@ -29,7 +29,7 @@ Metadata of the resulting subcorpora are shown in the table below:
 | | Name   | License | # Doc. Pairs (train/dev/test) | # Original Sents | # Simple Sents. | Alignment | # Sent. Pairs (train/dev/test) | Corpus Name Doc. | Corpus Name Sent.|
 |--------|-------------------------------|------------------|------------------------|----------------------------|---------------------------|--------------------|-------------------------|--------------------|-------------------------|
 |1 | DEplain-apa | upon request     | 483  (387/48/48)    | 25,607       | 26,471      | manual             | 13,122 (10,660/1,231/1,231)    | [DEplain-APA-doc](./B__Document-level_Corpus/DEplain-APA-doc) | [DEplain-APA-sent](./E__Sentence-level_Corpus/DEplain-APA-sent) |
-|2| DEplain-web     | open             | 147  (-/-/147)     | 6,138        | 6,402       | manual             | 1,846  (-/-/1846)    | [DEplain-web-doc-manual-open](./B__Document-level_Corpus/DEplain-web-doc/manual/open) | [DEplain-web-sent-manual-open](./E__Sentence-level_Corpus/DEplain-web-sent-manual-open) |
+|2| DEplain-web     | open             | 147  (-/-/147)     | 6,138        | 6,402       | manual             | 1,846  (-/-/1846)    | [DEplain-web-doc-manual-open](./B__Document-level_Corpus/DEplain-web-doc/manual/open) | [DEplain-web-sent-manual-open](./E__Sentence-level_Corpus/DEplain-web-sent/manual/open) |
 |3| DEplain-web       | open             | 249 (199/50/-)     | 7,087        | 7,760       | auto               | 652 (514/138/-)      | [DEplain-web-doc-auto-open](./B__Document-level_Corpus/DEplain-web-doc/auto/open) | [DEplain-web-sent-auto-open](./E__Sentence-level_Corpus/DEplain-web-sent/auto/open) |
 |4| DEplain-web       | closed           | 360 (288/72/-)     | 12,847       | 18,068      | auto               | 942  (767/175/-)      | [DEplain-web-doc-auto-closed](./B__Document-level_Corpus/DEplain-web-doc/auto/closed) | [DEplain-web-sent-auto-closed](./E__Sentence-level_Corpus/DEplain-web-sent/auto/closed) |
 || In total              | mixed            | 1,239 (874/170/195)   | 51,681       | 58,701      | mixed              | 16,562 (11,941/1,544/3,077)   | | |
@@ -61,17 +61,18 @@ If you use part of this work, please cite our paper:
 
 ```
 @inproceedings{stodden-etal-2023-deplain,
-    title = "{DE}-plain: A German Parallel Corpus with Intralingual Translations into Plain Language for Sentence and Document Simplification",
-    author = "Stodden, Regina  and
-      Momen, Omar  and
-      Kallmeyer, Laura",
-    booktitle = "Proceedings of the 61st Annual Meeting of the Association for Computational Linguistics",
+    title = "{DE}plain: A {G}erman Parallel Corpus with Intralingual Translations into Plain Language for Sentence and Document Simplification",
+    author = "Stodden, Regina and Momen, Omar and Kallmeyer, Laura",
+    booktitle = "Proceedings of the 61st Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)",
     month = jul,
     year = "2023",
     address = "Toronto, Canada",
     publisher = "Association for Computational Linguistics",
-    notes = "preprint: https://arxiv.org/abs/2305.18939",
+    url = "https://aclanthology.org/2023.acl-long.908",
+    doi = "10.18653/v1/2023.acl-long.908",
+    pages = "16441--16463",
 }
+
 ```
 
 ## Contact:

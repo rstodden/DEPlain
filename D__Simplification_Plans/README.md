@@ -19,9 +19,11 @@ The files contain one line pair simplification pair where one side of the pair (
 In the last column the alignment relation between the original and the simplified text is described. The alignment relations can be described as follows:
 
 - aligned (n:m): all pairs which are manually aligned on the sentence level. In the brackets, the number of sentences of the original (n) and simplified (m) texts are specified. In this case, n and m are equal or greather than 1. 
+- aligned (removed): the pair was manually aligned but was deleted from the sentence-level corpus (e.g., if the pair occurs more than once in the dataset). The number of original sentences and simplified sentences is not specified.
 - identical: a sentence of the original document is exactly copied to the simplified document, both sentences are identical. The original sentence was not simplified, but just copied, maybe because it is already easy to read.
-- removed (or deleted): during the manual alignment, this sentence of the original document was not aligned. Hence, we can interprete that this sentence was deleted and do not occur in a similar way in the simplified document. 
-- added: during the manual alignment, this sentence of the simplified document was not aligned. Hence, we can interprete that this sentence was added and do not occur in a similar way in the original document.
+- identical (removed): a sentence of the original document is exactly copied to the simplified document, both sentences are identical. However, the pair was deleted from the sentence-level corpus.
+- deletion: during the manual alignment, this sentence of the original document was not aligned. Hence, we can interprete that this sentence was deleted and do not occur in a similar way in the simplified document. 
+- addition: during the manual alignment, this sentence of the simplified document was not aligned. Hence, we can interprete that this sentence was added and do not occur in a similar way in the original document.
 
 Each file contains the following columns:
 
@@ -44,7 +46,7 @@ Each file contains the following columns:
 | `license `                                      | license of the data                                                                                   |
 | `access_date`                 | data origin data or data when the HTML files were downloaded                                          |
 | `rater`                                         | id of the rater who annotated the sentence pair                                                       |
-| `alignment`                                     | type of alignment, e.g., aligned (n:m), removed (or deletion), identical, addition                                                        |
+| `alignment`                                     | type of alignment, e.g., aligned (n:m), deletion, identical, addition                                                        |
 
 
 ## License
@@ -57,15 +59,15 @@ If you use part of this work, please cite our paper:
 
 ```
 @inproceedings{stodden-etal-2023-deplain,
-    title = "{DE}-plain: A German Parallel Corpus with Intralingual Translations into Plain Language for Sentence and Document Simplification",
-    author = "Stodden, Regina  and
-      Momen, Omar  and
-      Kallmeyer, Laura",
-    booktitle = "Proceedings of the 61st Annual Meeting of the Association for Computational Linguistics",
+    title = "{DE}plain: A {G}erman Parallel Corpus with Intralingual Translations into Plain Language for Sentence and Document Simplification",
+    author = "Stodden, Regina and Momen, Omar and Kallmeyer, Laura",
+    booktitle = "Proceedings of the 61st Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)",
     month = jul,
     year = "2023",
     address = "Toronto, Canada",
     publisher = "Association for Computational Linguistics",
-    notes = "preprint: https://arxiv.org/abs/2305.18939",
+    url = "https://aclanthology.org/2023.acl-long.908",
+    doi = "10.18653/v1/2023.acl-long.908",
+    pages = "16441--16463",
 }
 ```
